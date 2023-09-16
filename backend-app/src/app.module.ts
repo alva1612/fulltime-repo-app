@@ -3,7 +3,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import { ENV, EnvSchema } from './config/env.config';
-import { RepoModule } from './repo/repo.module';
+import { RepoModule } from './modules/repo/repo.module';
+import { CommitModule } from './modules/commit/commit.module';
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { RepoModule } from './repo/repo.module';
       validationSchema: EnvSchema,
     }),
     RepoModule,
+    CommitModule,
   ],
   controllers: [AppController],
   providers: [AppService],

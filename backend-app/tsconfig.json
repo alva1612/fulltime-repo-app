@@ -16,6 +16,12 @@
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@repo/*": ["src/modules/repo/*"],
+      "@commit/*": ["src/modules/commit/*"],
+      "@config/*": ["src/config/*"],
+      "@common/*": ["src/common/*"]
+    }
   }
 }
