@@ -17,11 +17,11 @@ export class CommitService {
     return data;
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} commit`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} commit`;
+  async findOne(sha: string) {
+    const url = `${this._configService.getOrThrow(
+      EnvKey.BASE_URL,
+    )}/commits/${sha}`;
+    const { data } = await firstValueFrom(this._http.get<CommitInfo[]>(url));
+    return data;
   }
 }

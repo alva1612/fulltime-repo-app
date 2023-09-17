@@ -1,3 +1,5 @@
+import { Commit, Parent } from '@commit/dto/all-commits.dto';
+
 export interface CommitInfo {
   sha: string;
   node_id: string;
@@ -29,38 +31,4 @@ export interface Author {
   received_events_url: string;
   type: string;
   site_admin: boolean;
-}
-
-export interface Commit {
-  author: CommitAuthor;
-  committer: CommitAuthor;
-  message: string;
-  tree: Tree;
-  url: string;
-  comment_count: number;
-  verification: Verification;
-}
-
-export interface CommitAuthor {
-  name: string;
-  email: string;
-  date: Date;
-}
-
-export interface Tree {
-  sha: string;
-  url: string;
-}
-
-export interface Verification {
-  verified: boolean;
-  reason: string;
-  signature: null;
-  payload: null;
-}
-
-export interface Parent {
-  sha: string;
-  url: string;
-  html_url: string;
 }

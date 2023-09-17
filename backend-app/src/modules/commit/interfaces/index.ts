@@ -1,1 +1,2 @@
-export * from './commit.interface';
+export * from './fetchCommits.interface';
+export * from './fetchOneCommit.interface';
