@@ -1,12 +1,8 @@
-import { useQuery } from "@tanstack/react-query";
-import { ENV } from "../../../env";
-import { fetchRepo } from "../queries/fetchRepo.query";
+import { RepoCard } from "../components/RepoCard";
+import { useRepo } from "../hooks/useRepo";
 
 export const RepoLanding = () => {
-  const { data, isLoading, isError } = useQuery({
-    queryKey: ["repo", ENV.REPO],
-    queryFn: fetchRepo,
-  });
+  const { data, isError, isLoading } = useRepo();
 
   console.log(data);
   if (isLoading) return <>CARGANDOOOOO</>;
@@ -15,6 +11,7 @@ export const RepoLanding = () => {
 
   return (
     <div className="">
+      <RepoCard />
       <p>{data.name}</p>
     </div>
   );
