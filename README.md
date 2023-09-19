@@ -45,7 +45,8 @@ Run in your CLI the following script in order to install all the required packag
 npm i
 ```
 
-While the installation is taking place. Create a `.env` file and copy the contents from `.env.example` into the `.env` file.
+> [!IMPORTANT]
+> While the installation is taking place. Create a `.env` file and copy the contents from `.env.example` into the `.env` file.
 
 Once the installation is done, you can start development mode by running the following command.
 
@@ -71,7 +72,8 @@ Open your CLI and install all modules.
 npm i
 ```
 
-While the installation is taking place. Create a `.env` file and copy the contents from `.env.example` into the `.env` file.
+> [!IMPORTANT]
+> While the installation is taking place. Create a `.env` file and copy the contents from `.env.example` into the `.env` file.
 
 After the installation is done. You can run the project with the following script.
 
