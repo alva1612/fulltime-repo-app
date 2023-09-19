@@ -25,6 +25,12 @@ First clone the project in your desired folder.
 git clone https://github.com/alva1612/fulltime-repo-app.git
 ```
 
+Move into the repo.
+
+```
+cd fulltime-repo-app
+```
+
 ## Backend
 
 Go inside the `backend-app` folder.
