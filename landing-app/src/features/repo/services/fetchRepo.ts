@@ -23,9 +23,9 @@ export interface RepoData {
   owner: ResponseOwner;
   description: string;
   url: string;
-  created_at: Date;
-  updated_at: Date;
-  pushed_at: Date;
+  created_at: string;
+  updated_at: string;
+  pushed_at: string;
   clone_url: string;
   stargazers_count: number;
   watchers_count: number;
