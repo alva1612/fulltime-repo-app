@@ -13,7 +13,7 @@ export const RepoCard = () => {
     return <CardSkeleton />;
 
   return (
-    <div className="w-full rounded-lg bg-zinc-800 border border-zinc-700 p-4">
+    <div className="w-full rounded-lg bg-zinc-900 border border-zinc-700 p-4">
       <div className="flex justify-between">
         <div>
           <h1 className="uppercase font-bold text-xl text-stone-400">

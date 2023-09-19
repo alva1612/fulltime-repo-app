@@ -1,5 +1,8 @@
 import { AxiosError } from "axios";
-import { Response } from "../../../common/interfaces/api.interface";
+import {
+  QueryReturn,
+  Response,
+} from "../../../common/interfaces/api.interface";
 import { httpCient } from "../../../lib/axios.client";
 
 export interface ResponseOwner {
@@ -38,10 +41,6 @@ export interface RepoData {
   network_count: number;
   subscribers_count: number;
 }
-
-type QueryReturn<T> =
-  | ({ type: "success" } & T)
-  | { type: "error"; data: AxiosError };
 
 export async function fetchRepo(): Promise<QueryReturn<RepoData>> {
   try {

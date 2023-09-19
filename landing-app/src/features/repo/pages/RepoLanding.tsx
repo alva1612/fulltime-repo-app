@@ -1,3 +1,4 @@
+import { CommitHistory } from "../../commit/components/CommitHistory";
 import { RepoCard } from "../components/RepoCard";
 import { useRepo } from "../hooks/useRepo";
 
@@ -10,9 +11,9 @@ export const RepoLanding = () => {
   if (data.type === "error") return <>ERRRORRRR</>;
 
   return (
-    <div className="">
+    <div className="flex flex-col gap-6">
       <RepoCard />
-      <p>{data.name}</p>
+      <CommitHistory />
     </div>
   );
 };
