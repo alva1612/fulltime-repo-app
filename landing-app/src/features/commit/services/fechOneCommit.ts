@@ -39,7 +39,7 @@ export interface Commit {
 export interface CommitAuthor {
   name: string;
   email: string;
-  date: Date;
+  date: string;
 }
 
 export interface Tree {
@@ -97,7 +97,7 @@ export async function fecthOneCommit(
   sha: string
 ): Promise<QueryReturn<OneCommit>> {
   try {
-    const res = await httpCient.get<Response<OneCommit>>(`commits/${sha}`);
+    const res = await httpCient.get<Response<OneCommit>>(`commit/${sha}`);
     return { type: "success", ...res.data.data };
   } catch (error) {
     const err = error as AxiosError;

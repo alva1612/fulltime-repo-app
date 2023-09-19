@@ -13,7 +13,7 @@ export const CommitHistory = () => {
   return (
     <div className="w-full rounded-lg flex flex-col gap-3">
       {data.commits.map((commit) => (
-        <CommitCard commit={commit} />
+        <CommitCard key={commit.sha} commit={commit} />
       ))}
     </div>
   );

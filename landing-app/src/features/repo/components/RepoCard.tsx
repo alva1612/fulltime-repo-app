@@ -19,11 +19,19 @@ export const RepoCard = () => {
   return (
     <div className="w-full rounded-lg bg-zinc-900 border border-zinc-700 p-4">
       <div className="flex justify-between">
-        <div>
-          <h1 className="uppercase font-bold text-xl text-stone-400">
+        <div className="flex flex-col">
+          <a
+            className="uppercase font-bold text-xl text-stone-400"
+            href={`https://github.com/${data.full_name}`}
+          >
             {data.name}
-          </h1>
-          <h4 className="text-stone-400 text-base">{data.owner.login}</h4>
+          </a>
+          <a
+            className="text-stone-400 text-base underline"
+            href={`https://github.com/${data.owner.url}`}
+          >
+            {data.owner.login}
+          </a>
         </div>
         <img
           className="rounded-lg w-12 border border-zinc-700 shadow"
