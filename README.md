@@ -3,6 +3,7 @@
 The stack used is NestJs for the backend and React for the frontend.
 
 - Node.js
+- Git
 
 # Folder structure
 
@@ -17,6 +18,12 @@ landing-app/
 Each folder contains a separate module.
 
 # Installation
+
+First clone the project in your desired folder.
+
+```
+git clone https://github.com/alva1612/fulltime-repo-app.git
+```
 
 ## Backend
 
