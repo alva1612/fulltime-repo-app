@@ -7,16 +7,12 @@ export class LoggerMiddleware implements NestMiddleware {
   private logger = new Logger('HTTP');
 
   use(request: Request, response: Response, next: NextFunction): void {
-    const { ip, method, path: url } = request;
-    const userAgent = request.get('user-agent') || '';
+    const { ip, method, baseUrl } = request;
 
     response.on('close', () => {
       const { statusCode } = response;
-      const contentLength = response.get('content-length');
 
-      this.logger.log(
-        `${method} ${url} ${statusCode} ${contentLength} - ${userAgent} ${ip}`,
-      );
+      this.logger.log(`${method} ${baseUrl} ${statusCode} - ${ip}`);
     });
 
     next();
