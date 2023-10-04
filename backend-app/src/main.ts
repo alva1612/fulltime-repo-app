@@ -4,7 +4,7 @@ import { ApiResponseInterceptor } from '@common/interceptors/api-response.interc
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  app.enableCors({ origin: '*', allowedHeaders: '*' });
+  app.enableCors({ origin: ['http://localhost:5173'] });
   app.useGlobalInterceptors(new ApiResponseInterceptor());
   await app.listen(3000);
 }

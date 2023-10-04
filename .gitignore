@@ -24,3 +24,4 @@
 */*.sw?
 
 */.env
+*/.env.production
