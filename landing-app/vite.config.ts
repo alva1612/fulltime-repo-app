@@ -13,6 +13,7 @@ export default defineConfig(({ mode }) => {
   });
 
   zodSchema.parse(currentEnv);
+  console.log(currentEnv.VITE_API_URL);
   console.log(currentEnv.BUCKET_URL);
 
   return {
