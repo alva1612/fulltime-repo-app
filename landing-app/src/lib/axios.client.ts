@@ -1,6 +1,7 @@
 import axios from "axios";
+import { ENV } from "../env";
 
 export const httpCient = axios.create({
-  baseURL: import.meta.env.VITE_API_URL,
+  baseURL: ENV.API_URL,
   timeout: 5000,
 });
